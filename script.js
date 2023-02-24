@@ -162,6 +162,10 @@ function klik1() {
     c("suka");
   } else if (nctMembers[index].suka === 3) {
     nctMembers[index].suka = 4;
+  } else if (nctMembers[index].suka === 4) {
+    nctMembers[index].suka = 5;
+  } else if (nctMembers[index].suka === 5) {
+    nctMembers[index].suka = 6;
     c("suka");
   }
 
@@ -184,6 +188,10 @@ function klik2() {
     c("suka");
   } else if (nctMembers[indexTwo].suka === 3) {
     nctMembers[indexTwo].suka = 4;
+  } else if (nctMembers[indexTwo].suka === 4) {
+    nctMembers[indexTwo].suka = 5;
+  } else if (nctMembers[indexTwo].suka === 5) {
+    nctMembers[indexTwo].suka = 6;
     c("suka");
   }
   c(nctMembers[indexTwo]);
@@ -251,14 +259,17 @@ function counter() {
         c("tahap Kedua")
       } else if(nilai === 36){
         nctMembers.sort((a,b) => a.suka - b.suka);
-        c("tahap Kedua")
+        c("tahap Ketiga")
+      } else if(nilai === 48){
+        nctMembers.sort((a,b) => b.suka - a.suka);
+        c("tahap Akhir")
       }
-  persen.textContent = nilai * Math.floor(2.08) + "%";
+  persen.textContent = nilai * Math.floor(2) + "%";
   // Warana Tabung Persen
-  if (nilai * 2.08 < 100) {
+  if (nilai * 2 < 100) {
     tabung.style.backgroundColor = "#662d91";
     tabung.style.width = nilai * 2 + "%";
-  } else if (nilai * 2.08 >= 100) {
+  } else if (nilai * 2 >= 100) {
     // Mengurutkan member sorter
     // menampilkan hasil
     document.getElementById("hasil").classList.add("aktif");
